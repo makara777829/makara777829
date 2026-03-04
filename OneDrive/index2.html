@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Portal | 18+</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ff0000;
+      --bg-dark: #0f0f0f;
+      --card-bg: #1e1e1e;
+      --text-main: #ffffff;
+      --text-dim: #aaaaaa;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Hanuman', 'Roboto', serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* --- Age Gate --- */
+    #age-gate {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.98);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .gate-content {
+      background: #222;
+      padding: 40px;
+      border-radius: 15px;
+      border: 1px solid #333;
+      max-width: 400px;
+    }
+    .btn {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .btn-confirm { background: var(--primary); color: white; }
+
+    /* --- Header --- */
+    header {
+      background-color: #1a1a1a;
+      padding: 20px 5%;
+      text-align: center;
+      border-bottom: 2px solid var(--primary);
+    }
+    header h1 {
+      margin: 0;
+      font-family: 'Impact', sans-serif;
+      color: var(--primary);
+      letter-spacing: 2px;
+    }
+
+    /* --- Main Layout --- */
+    .container {
+      flex: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .video-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      text-decoration: none;
+      transition: 0.3s;
+      border: 1px solid #333;
+    }
+    .video-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--primary);
+      box-shadow: 0 10px 30px rgba(255,0,0,0.2);
+    }
+
+    .thumb {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #000;
+      display: block;
+      object-fit: cover;
+    }
+
+    .info { padding: 20px; }
+    .info h3 {
+      margin: 0;
+      font-size: 18px;
+      color: var(--text-main);
+      text-align: center;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-dim);
+      background: #111;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="age-gate">
+    <div class="gate-content">
+      <h2 style="color:red">បញ្ជាក់អាយុ</h2>
+      <p>តើអ្នកមានអាយុលើសពី ១៨ ឆ្នាំមែនទេ?</p>
+      <button class="btn btn-confirm" onclick="verify()">បាទ/ចាស ខ្ញុំយល់ព្រម</button>
+    </div>
+  </div>
+
+  <header>
+    <h1>MY ADULT SITE</h1>
+  </header>
+
+  <div class="container">
+    <div class="video-grid">
+      <a href="https://toppornsites.com/" class="video-card">
+        <img src="photo_2026-03-04_17-30-07.jpg" class="thumb" alt="Video 1">
+        <div class="info">
+          <h3>ប្រុសគីមស្ដេចខ្វេះ</h3>
+        </div>
+      </a>
+
+      <a href="https://toppornsites.com/" class="video-card">
+        <img src="photo_2026-03-04_17-30-08.jpg" class="thumb" alt="Video 2">
+        <div class="info">
+          <h3>ប្រុសណែតស្ដេចវៃ</h3>
+        </div>
+      </a>
+
+      <a href="https://toppornsites.com/" class="video-card">
+        <img src="photo_2026-03-04_17-30-09.jpg" class="thumb" alt="Video 3">
+        <div class="info">
+          <h3>ប្រុសហេងស្ដេចលិត</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2026 18+ Only | All Rights Reserved
+  </footer>
+
+  <script>
+    function verify() {
+      document.getElementById('age-gate').style.display = 'none';
+      localStorage.setItem('verified', 'true');
+    }
+    if(localStorage.getItem('verified') === 'true') {
+      document.getElementById('age-gate').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
